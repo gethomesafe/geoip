@@ -15,7 +15,7 @@ abstract class MaxmindDriver extends AbstractGeoIPDriver
     /**
      * @param array $config
      */
-    public function __construct(array $config, GuzzleClient $guzzle = null)
+    public function __construct(array $config, ?GuzzleClient $guzzle = null)
     {
         parent::__construct($config, $guzzle);
 
