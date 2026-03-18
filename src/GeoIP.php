@@ -37,7 +37,7 @@ class GeoIP
     /**
      * @var array
      */
-    public function __construct(array $config = ['driver' => 'ip-api'], GuzzleClient $guzzle = null)
+    public function __construct(array $config = ['driver' => 'ip-api'], ?GuzzleClient $guzzle = null)
     {
         $this->driver = with(new GeoIPManager($config, $guzzle))->getDriver();
         $this->random = Arr::get($config, 'random', false);
